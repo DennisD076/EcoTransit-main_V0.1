@@ -1,0 +1,35 @@
+
+[2K[1G[1myarn run v1.22.22[22m
+[2K[1G[33mwarning[39m package.json: No license field
+[2K[1G[2m$ npx hardhat run scripts --network vechain_solo[22m
+[1G[0KDeploying on vechain_solo with wallet 0xf077b491b355E64048cE21E3A6Fc4751eEeA77fa...
+Deploying mock RewardToken...
+HardhatPluginError: Error on request - eth_blockNumber
+    at HardhatVeChainProvider.buildHardhatErrorFunctionCallback (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-hardhat-plugin/dist/index.js:95:26)
+    at HardhatVeChainProvider.request (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-network/dist/index.js:6822:18)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async HardhatVeChainProvider.send (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-network/dist/index.js:6747:12)
+    at async HardhatEthersProvider.getBlockNumber (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@nomicfoundation/hardhat-ethers/src/internal/hardhat-ethers-provider.ts:134:25)
+    at async HardhatEthersSigner.sendTransaction (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:122:25)
+    at async ContractFactory.contractFactory.deploy (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-ethers-adapter/dist/index.js:75:20)
+    at async deploy (/Users/dennisdekkers/Downloads/x-app-template-main/apps/contracts/scripts/deploy.ts:19:29)
+    at async execute (/Users/dennisdekkers/Downloads/x-app-template-main/apps/contracts/scripts/index.ts:7:5)
+
+    Caused by: Error: Method 'eth_blockNumber()' failed.
+    -Reason: 'Method "eth_blockNumber" failed.'
+    -Parameters: 
+    	{"code":-32603,"message":"Method \"eth_blockNumber\" failed.","data":{"url":"http://localhost:8669","innerError":"{\"methodName\":\"HttpClient.http()\",\"errorMessage\":\"Invalid URL: http://localhost:8669/blocks/best\",\"data\":{\"method\":\"GET\",\"url\":\"http://localhost:8669/blocks/best\",\"message\":\"Request failed\"},\"innerError\":{}}"}}
+    -Internal error: 
+    	No internal error given
+        at ethBlockNumber (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-network/dist/index.js:4674:11)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Object.eth_blockNumber (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-network/dist/index.js:5011:14)
+        at async HardhatVeChainProvider.request (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-network/dist/index.js:6537:12)
+        at async HardhatVeChainProvider.request (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-network/dist/index.js:6798:22)
+        at async HardhatVeChainProvider.send (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-network/dist/index.js:6747:12)
+        at async HardhatEthersProvider.getBlockNumber (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@nomicfoundation/hardhat-ethers/src/internal/hardhat-ethers-provider.ts:134:25)
+        at async HardhatEthersSigner.sendTransaction (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:122:25)
+        at async ContractFactory.contractFactory.deploy (/Users/dennisdekkers/Downloads/x-app-template-main/node_modules/@vechain/sdk-ethers-adapter/dist/index.js:75:20)
+        at async deploy (/Users/dennisdekkers/Downloads/x-app-template-main/apps/contracts/scripts/deploy.ts:19:29)
+[1G[0K⠙[1G[0K[2K[1G[31merror[39m Command failed with exit code 1.
+[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.

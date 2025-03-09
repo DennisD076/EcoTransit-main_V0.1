@@ -1,0 +1,13 @@
+
+[2K[1G[1myarn run v1.22.22[22m
+[2K[1G[33mwarning[39m package.json: No license field
+[2K[1G[2m$ npx hardhat run scripts --network vechain_testnet[22m
+[1G[0KCompiled 1 Solidity file successfully (evm target: paris).
+Deploying on vechain_testnet with wallet 0x4f5Ec00bBf3a8228ac0536a120dD4F59336cCF6D...
+Deploying EcoEarn contract...
+EcoEarn deployed to: 0xf5f2a9c8bba754c34c22a5e4ac97cc9efe26e5b7
+To start using the contract, we need to set the rewards amount and switch to the next cycle
+Rewards set reward amount to 1000
+Switched to next cycle
+Done
+[1G[0K⠙[1G[0K[2K[1G✨  Done in 29.09s.
